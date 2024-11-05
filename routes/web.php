@@ -12,9 +12,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function() {
+    return view('welcome');
+});
 
 Route::get('hello/{name?}', function($name = 'Everybody') {
     return 'Hello, ' . $name;
-});
+})->name('hello.index');;
 
 
